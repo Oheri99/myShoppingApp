@@ -1,6 +1,6 @@
 # myShoppingApp
 
-[![CI](https://github.com/Oheri99/myShoppingApp/actions/workflows/ci.yml/badge.svg)](https://github.com/Oheri99/myShoppingApp/actions/workflows/ci.yml)
+[![CI](https://github.com/Oheri99/myShoppingApp/actions/workflows/ci.yml/badge.svg)](https://github.com/Oheri99/myShoppingApp/actions/workflows/ci.yml) [![Vercel](https://img.shields.io/badge/deploy-on%20vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/project?template=https://github.com/Oheri99/myShoppingApp)
 
 > A simple shopping list app built with React, TypeScript, and Vite. Add items, mark them complete, edit, delete, and keep your list saved in the browser.
 
@@ -58,8 +58,14 @@ This project can be deployed with Vercel, Netlify, or any static site host that 
 ### Recommended
 
 - Connect your GitHub repo to Vercel
-- Set the root directory to `/` and use `npm run build`
+- Set the root directory to `/`
+- Build command: `npm run build`
+- Output directory: `dist`
 - Vercel will automatically deploy on every push to `main`
+
+### Vercel config
+
+This repo includes `vercel.json`, which ensures Vercel uses the `dist` output and routes all requests to `index.html` for client-side routing.
 
 ## 📸 Screenshot
 
