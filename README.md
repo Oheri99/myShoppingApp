@@ -51,6 +51,15 @@ npm run build
 npm run preview
 ```
 
+## 🧪 End-to-end Tests
+
+This repository includes Playwright E2E tests for the shopping list flow.
+
+```bash
+npm install
+npm run test:e2e
+```
+
 ## 🌐 Deployment
 
 This project can be deployed with Vercel, Netlify, or any static site host that supports Vite output.
