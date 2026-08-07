@@ -1,7 +1,8 @@
 {
-  "name": "shopping-list",
+  "name": "my-shopping-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "A React + TypeScript shopping list app with localStorage persistence.",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +10,11 @@
     "lint": "oxlint",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Oheri99/myShoppingApp.git"
+  },
+  "license": "MIT",
   "dependencies": {
     "react": "^19.2.8",
     "react-dom": "^19.2.8"

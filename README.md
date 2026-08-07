@@ -1,32 +1,75 @@
-# React + TypeScript + Vite
+# myShoppingApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+[![CI](https://github.com/Oheri99/myShoppingApp/actions/workflows/ci.yml/badge.svg)](https://github.com/Oheri99/myShoppingApp/actions/workflows/ci.yml)
 
-Currently, two official plugins are available:
+> A simple shopping list app built with React, TypeScript, and Vite. Add items, mark them complete, edit, delete, and keep your list saved in the browser.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- Add shopping items with a quick input form
+- Toggle items as complete / incomplete
+- Edit item names inline
+- Delete items from the list
+- Persist items using `localStorage`
+- Responsive styling for desktop and mobile
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧩 Tech Stack
 
-## Expanding the Oxlint configuration
+- React 19
+- TypeScript 6
+- Vite 8
+- Oxlint for linting
+- GitHub Actions for CI
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 📁 Project Structure
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- `src/App.tsx` — main application logic and persistence
+- `src/components/AddItem.tsx` — input form for new items
+- `src/components/ShoppingList.tsx` — list rendering, edit/delete/toggle controls
+- `src/types/ShoppingItem.ts` — item type definition
+- `src/index.css` — global styling and layout
+
+## ▶️ Run locally
+
+```bash
+cd shopping-list
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Open the local URL shown by Vite (usually `http://localhost:5173`).
+
+## ✅ Build
+
+```bash
+npm run build
+```
+
+## 📦 Preview production build
+
+```bash
+npm run preview
+```
+
+## 🌐 Deployment
+
+This project can be deployed with Vercel, Netlify, or any static site host that supports Vite output.
+
+### Recommended
+
+- Connect your GitHub repo to Vercel
+- Set the root directory to `/` and use `npm run build`
+- Vercel will automatically deploy on every push to `main`
+
+## 📸 Screenshot
+
+![App screenshot](./public/icons.svg)
+
+## 📌 Notes
+
+- The app uses `localStorage`, so data is stored per browser/device.
+- The GitHub Actions workflow validates the app by installing dependencies, linting, and building.
+
+## 📫 Contact
+
+If you'd like help making this repo even more portfolio-ready, I can add Playwright tests, a production deployment badge, and a demo link.
