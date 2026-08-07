@@ -60,7 +60,7 @@ function ShoppingList({ items, onToggle, onDelete, onEdit }: Props) {
                 className={`toggle-button ${item.completed ? "completed" : "pending"}`}
                 type="button"
                 onClick={() => onToggle(item.id)}
-                aria-label={item.completed ? "Mark incomplete" : "Mark complete"}
+                aria-label={item.completed ? `Mark ${item.name} as incomplete` : `Mark ${item.name} as complete`}
               >
                 {item.completed ? "☑" : "☐"}
               </button>

@@ -8,6 +8,7 @@ const STORAGE_KEY = "shopping-list-items";
 function App() {
 
   const [items, setItems] = useState<ShoppingItem[]>([]);
+  const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -18,11 +19,13 @@ function App() {
         setItems([]);
       }
     }
+    setIsHydrated(true);
   }, []);
 
   useEffect(() => {
+    if (!isHydrated) return;
     localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
-  }, [items]);
+  }, [items, isHydrated]);
 
   const addItem = (name: string) => {
     const newItem: ShoppingItem = {
