@@ -68,7 +68,7 @@ function ShoppingList({ items, onToggle, onDelete, onEdit }: Props) {
                 {item.name}
               </span>
               <div className="item-actions">
-                <button className="action-button" type="button" onClick={() => startEditing(item)}>
+                <button className="action-button edit" type="button" onClick={() => startEditing(item)}>
                   Edit
                 </button>
                 <button className="action-button delete" type="button" onClick={() => onDelete(item.id)}>
