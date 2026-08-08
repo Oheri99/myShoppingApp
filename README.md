@@ -84,9 +84,6 @@ This repo includes `vercel.json`, which configures Vercel to use the `dist` outp
 - App data is stored in the browser using `localStorage`.
 - The repo includes a GitHub Actions workflow that installs dependencies, lints the code, and builds the app.
 
-## 📫 Contact
-
-If you want, I can help improve this repo further with additional tests, deployment badges, or a live demo link.
 
 ## 🩺 Troubleshooting: `npm ci` failures
 
