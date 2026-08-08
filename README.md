@@ -86,4 +86,3 @@ This repo includes `vercel.json`, which configures Vercel to use the `dist` outp
 
 ## 📫 Contact
 
-If you want, I can help improve this repo further with additional tests, deployment badges, or a live demo link.
