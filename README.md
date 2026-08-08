@@ -86,3 +86,21 @@ This repo includes `vercel.json`, which configures Vercel to use the `dist` outp
 
 ## 📫 Contact
 
+If you want, I can help improve this repo further with additional tests, deployment badges, or a live demo link.
+
+## 🩺 Troubleshooting: `npm ci` failures
+
+The most likely cause for `npm ci` failing in CI is an invalid npm configuration (for example an erroneous `.npmrc`) in the repository or a parent folder. If you see errors during `npm ci` in GitHub Actions, try the steps below:
+
+1. Check for a `.npmrc` file in your repository root or in any parent folder and inspect it for invalid options. No `.npmrc` files were found in the repository when inspected locally.
+2. Keep the GitHub Actions install step simple—use the basic `npm ci` command in your workflow. Example step:
+
+```yaml
+- name: Install dependencies
+	run: npm ci
+```
+
+3. If you need to pass special npm options, validate they are supported by the npm version used in the CI runner. Prefer setting registry or auth via GitHub Actions secrets and official actions when possible.
+
+If problems persist after removing or fixing `.npmrc`, capture the failing `npm ci` output from the workflow logs and open an issue with that log for further diagnosis.
+
